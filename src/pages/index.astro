@@ -1,17 +1,629 @@
----
-
----
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+	<link rel="stylesheet" href="/styles/global.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main class="desktop">
+
+      <!-- Icon Dock -->
+      <nav class="icon-dock">
+        <div
+  			class="icon"
+  			data-app="repository"
+  			tabindex="0"
+  			role="button"
+		>
+          <img	
+			src="public/icons/repository.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">Repository.app</div>
+        </div>
+
+        <div
+  			class="icon"
+  			data-app="spatiallab"
+  			tabindex="0"
+  			role="button"
+		>
+           <img	
+			src="public/icons/mr.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">SpatialDesign.app</div>
+        </div>
+
+        <div
+  			class="icon"
+  			data-app="navcore"
+  			tabindex="0"
+  			role="button"
+		>
+           <img	
+			src="public/icons/nav.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">MainNav.app</div>
+        </div>
+
+		<div
+  			class="icon"
+  			data-app="about"
+  			tabindex="0"
+  			role="button"
+		>           <img	
+			src="public/icons/about.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">About.exe</div>
+        </div>
+
+		<div
+  			class="icon"
+  			data-app="resume"
+  			tabindex="0"
+  			role="button"
+		>           <img	
+			src="public/icons/resume.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">Resume.pdf</div>
+        </div>
+
+		<div
+  		class="icon"
+  		data-app="contact"
+  			tabindex="0"
+  			role="button"
+		>           <img	
+			src="public/icons/contact.png"
+			alt=""
+			class="icon-image"
+			draggable="false"
+			/>
+          <div class="icon-label">Contact.app</div>
+        </div>
+      </nav>
+
+  <div class="icon-column icon-column--right">
+    	<div
+      	class="icon"
+     	 data-app="trash"
+     	 tabindex="0"
+     	 role="button"
+    	>
+      <img
+        src="public/icons/trash.png"
+        alt=""
+        class="icon-image"
+        draggable="false"
+      />
+      <div class="icon-label">Trash</div>
+		</div>
+
+<div class="avatar">
+  <img
+    src="/images/avatar.png"
+    alt="Illustrated avatar of me"
+    class="avatar-image"
+    draggable="false"
+  />
+
+  <div class="avatar-bubble">
+    <p>
+      Hi 👋 I’m Anne Olea Svensson Hegre. Welcome to my portfolio thingy.
+    </p>
+  </div>
+</div>
+
+	<!-- Window Area -->
+    <section class="window-stage">
+
+  <article class="window" data-window="repository">
+  	<header class="window-titlebar">
+    <span class="window-title">Repository.app</span>
+    <div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>
+  	</header>
+
+  	<div class="window-content">
+    <h1>Building a Scalable UX Research Repository</h1>
+	2024-
+	
+	<h2>Overview</h2>
+		<p>User research was scattered across multiple platforms, making insights difficult to access and leading to redundant efforts. 
+		With the departure of the only UX designer who had full research oversight, valuable knowledge risked being lost. 
+		To solve this, I led the implementation of a centralized, structured, and searchable research repository. 
+		This improved accessibility, stakeholder engagement, and research adoption, helping teams make more data-driven decisions. 
+		Through strategic tool selection, a scalable taxonomy, and transparent data practices, 
+		we successfully embedded research as a core part of product development and strengthened UX maturity across the organization.
+		</p>
+
+	<h2>Challenge</h2>
+	<p>
+		When I joined the company, I quickly realized that valuable user research was at risk of being lost or underutilized. 
+		The previous UX designer—who was the sole person with an overview of past research—was leaving, and with her, 
+		much of the institutional knowledge about what research had been conducted, what insights had been gathered, 
+		and where key artifacts were stored.
+		
+		<p>Without a centralized system, 
+		research findings were scattered across different formats and tools, as a result:
+		</p>
+
+		<ul>
+  		<li><b>Insights were siloed</b>, making it difficult for designers, product managers, and developers to access past research.</li>
+  		<li><b>Teams often duplicated research efforts</b>, wasting time and resources on problems that had already been explored.</li>
+  		<li><b>Historical context was missing</b>, leading to design decisions that didn’t always build on prior learnings.</li>
+		<li><b>New employees had no easy way to onboard into existing research</b>, slowing down their ability to contribute effectively.</li>
+		</ul>
+	</p>
+
+	<h2>Process</h2>
+		<h3>Research & Discovery</h3>
+		<p>
+			To understand the challenges, I conducted stakeholder interviews to identify pain points. 
+			However, since research had low visibility, few team members had engaged with it in the past. 
+			Fortunately, I had strong support from a product manager invested in growing UX maturity.
+		</p>
+
+		<p>
+			I defined key tool selection criteria:
+			<ul>
+				<li><b>Ease of use </b>– Minimal onboarding required.</li>
+				<li><b>Searchability </b> – Insights should be easy to find.</li>
+				<li><b>Shareability</b> – Research should be accessible beyond the UX team.</li>
+				<li><b>Taxonomy & organization </b> – A structured approach for long-term scalability.</li>
+			</ul>
+		</p>
+
+		<p>
+			I sent out an RFP (Request for Proposal) to relevant vendors, 
+			allowing for an informed decision based on facts rather than assumptions.
+		</p>
+		
+		<h3>Solution & Implementation</h3>
+		<p>
+			After evaluating multiple tools, <i>Condens</i> was the best fit due to its repository-first approach, 
+			while competitors lacked focus on insight storage and accessibility.
+		</p>
+
+		<p>
+			To drive adoption, we prioritized visibility over formal training:
+			<ul>
+				<li>Encouraged team members to create accounts and explore research independently.</li>
+				<li>Integrated the repository into existing workflows to make insights part of daily work.</li>
+				<li>Created structured research reports with direct user quotes and clips, sharing them across tools and meetings to increase impact.</li>
+			</ul>
+		</p>
+
+		<h3>Challenges & Iterations</h3>
+		<p>
+			Implementing Condens required addressing data privacy concerns. 
+			I collaborated with our data privacy lead and an external consultant to develop a GDPR-compliant permission form, 
+			allowing us to store interview recordings securely.
+		</p>
+
+		<p>
+			Additionally, taxonomy and tagging required continuous improvement. 
+			Regular UX team discussions helped refine our system, 
+			ensuring insights remained easy to search and connect across projects.
+		</p>
+
+	<h2>Outcome</h2>
+		<h3>Impact & Results</h3>
+		<p>
+			Without hard metrics, we relied on qualitative feedback, 
+			which was overwhelmingly positive:
+			<ul>
+				<li>Less redundant research – Insights were easily accessible, reducing the need to re-interview users.</li>
+				<li>Higher engagement – More team members, including management, took the time to watch full interviews.</li>
+				<li>Stronger research adoption – Stakeholders found user quotes and video clips more relatable, making insights actionable.</li>
+			</ul>
+		</p>
+
+		<p>
+			The repository laid the foundation for stronger UX maturity, 
+			making research a central part of decision-making.
+		</p>
+
+		<h3>Key Learnings</h3>
+		<ul>
+			<li>Adoption matters – Making research visible in workflows is more effective than training sessions.</li>
+			<li>Taxonomy evolves – Tagging systems require continuous iteration to stay relevant.</li>
+			<li>Engaging reports drive impact – Direct user quotes and video clips increase stakeholder buy-in.</li>
+			<li>Data privacy must be proactive – Establishing clear guidelines early prevents compliance issues.</li>
+			<li>A repository is a UX maturity milestone – This project helped embed research-driven decision-making into the organization.</li>
+			<li>List items are a pain to add in html</li>
+		</ul>
+
+		<h3>Next Steps</h3>
+		<p>To continue improving research adoption, we plan to:
+			<ul>
+			<li>Expand stakeholder engagement by encouraging more teams to leverage research insights.</li>
+			<li>Further refine taxonomy based on usage patterns.</li>
+			<li>Track repository usage to measure impact and improve visibility.</li>
+			</ul>
+		</p>
+
+  	</div>
+</article>
+
+<article class="window" data-window="spatiallab">
+  	<header class="window-titlebar">
+	<span class="window-title">SpatialLab.app</span>
+	<div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>
+	</header>
+
+  <div class="window-content">
+    <h1>Mixed-Reality Kitchen Planning</h1>
+
+	<p>
+		2022
+	</p>
+
+ <img
+    src="public/images/spatiallab/header.jpeg"
+    alt="Woman interacting with virtual kitchen while wearing a mixed-reality headset."
+    class="case-image"
+  />
+
+	<h2>Overview</h2>
+	<p>
+		The Island Labs design team was tasked with designing a fully immersive kitchen design and creation experience for HoloLens 2, specifically targeted towards kitchen sellers. 
+		The current process involved using an iPad app to design the kitchen before presenting it on the HoloLens 2 (Microsoft’s MR headset), which could be cumbersome and distracting. 
+		Our goal was to simplify this process by allowing users to design and build the kitchen entirely within the HoloLens 2. 
+		The project included extensive storyboarding, creative problem-solving and working closely with developers to develop POCs.
+	</p>
+
+	<h2>Challenge</h2>
+		<p>Designing for XR and HoloLens 2 is a unique challenge as every interaction, from object selection to object editing, has to be carefully implemented with a certain logic. 
+			Unlike with other applications, there are no established style rules or best practices, making this an exciting opportunity to push the boundaries of mixed reality design.
+			</p>
+	
+	<h2>Process</h2>
+	<h3>Research</h3>
+	<p>To kick off the project, the team conducted research on both XR and flat apps to see what we could learn from existing solutions. 
+	This research helped us identify potential design opportunities.
+	</p>
+
+	<h3>Ideation</h3>
+	<p>To be honest, this part of the process was mostly three designers in a room either waving their hands around, 
+		walking slowly around our test kitchen or engaging in serious discussions by the whiteboard. 
+		Through these activities, we explored a range of ideas and worked to refine our concept.
+	</p>
+
+	<h3>Storyboarding</h3>
+	<p>
+		After agreeing on a concept, we needed to get it down on paper so we could communicate it to the rest of the team. 
+		Together, the design team created an extensive storyboard covering all interactions that needed to be built. 
+	</p>
+
+	<img
+  src="public/images/spatiallab/storyboard.png"
+  alt="Storyboard for an immersive kitchen building concept"
+  class="case-image"
+/>
+
+	<h3>Design and Prototyping</h3>
+	<p>
+		Following approval of the storyboard, the team worked on designing the UI for the menus our concept demanded. 
+		I was responsible for designing the style selector, which allows users to change the materials of the kitchen cabinets. 
+		This also included logic behaviors for editing styles globally versus individually, resetting styles, and a filtering system for available styles.
+		With the designs in place, we began prototyping to test the functionality of our designs.
+	</p>
+
+	<img
+  src="public/images/spatiallab/styles.png"
+  alt="Styles selection panel from an immersive kitchen building concept"
+  class="case-image"
+/>
+
+	<h3>POCs and Testing</h3>
+	<p>
+		The design team worked closely with developers to create proof-of-concept features, testing and refining the concept to ensure that every detail felt intuitive to use. 
+		Have you ever thought about which joint of your virtual hand should anchor a loading bar? To find an answer and spare you the trouble, 
+		I tested ten different locations and loading speeds for said loading bar. Should you be able to see your finger cursor through a hologram? Our answer: yes. 
+	</p>
+
+	<p>
+		Given the technical constraints of developing for XR (for the time being), we had to be mindful of unique limitations and work creatively to overcome them during this testing phase. 
+	</p>
+
+	<img
+  src="public/images/spatiallab/far-selection.gif"
+  alt="Prototype of far selection"
+  class="case-image"
+/>
+
+<img
+  src="public/images/spatiallab/closeall.gif"
+  alt="Prototype of a close all cabinets button"
+  class="case-image"
+/>
+
+	<h2>Outcome</h2>
+	<p>Through this project I gained valuable insights into the unique challenges of designing for mixed reality, 
+	including how to communicate design ideas effectively and which interactions translate well into the realm of mixed reality. 
+	Working closely with developers gave me an even deeper understanding of the technical constraints associated with designing for XR.
+	</p>	
+	
+	<p>
+		While this product no longer exists, 
+		I appreciated starting my UX career working on a product where I needed to think independently about usability instead of relying on best practises.
+	</p>
+
+  </div>
+</article>
+
+<article class="window" data-window="navcore">
+  <header class="window-titlebar">
+    <span class="window-title">MainNav.app</span>
+	<div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>  
+	</header>
+
+  <div class="window-content">
+    <h1>Rebuilding Product Navigation</h1>
+	2025-
+
+    <h2>Overview</h2>
+		<p>This project focused on improving navigation in a SaaS platform used to monitor and manage PV power plants. 
+			I owned this initiative from problem framing through research, concept development, validation, and developer handover 
+			- including responsibilities typically handled by a Product Owner during the feature definition phase.
+		</p>
+
+	<h2>Challenge</h2>
+		<p>User feedback and prior research showed recurring navigation friction:
+
+		<ul>
+  		<li>Users complained that everyday tasks felt cumbersome and time consuming.</li>
+  		<li>Navigation patterns differed between product areas </li>
+  		<li>Users had to repeatedly re-select plants when moving between sections.</li>
+		</ul>
+		</p>
+
+		<p></p>
+	<p>
+		Competitor analysis revealed a key difference in navigation models:
+		<ul>
+		<li>Our product used <b>area-first navigation</b> (area → plant).</li>
+		<li>Most competitors used <b>plant-first navigation </b> (plant → area).</li>
+		</ul>
+	</p>
+		<p></p>	
+	<p>
+		Simply copying competitor patterns would not fit our product structure. 
+		The challenge was to design a scalable navigation model that preserved 
+		plant context while remaining compatible with the existing architecture and workflows.
+	</p>
+
+	<h2>Process</h2>
+		<h3>Problem Framing & Ownership</h3>
+		<p>
+			I defined the navigation problem space, aligned stakeholders on scope and goals, 
+			and shaped the feature direction. I drove the initiative across discovery, 
+			concept design, validation, and specification - bridging UX and product definition work.
+		</p>
+
+		<h3>Concept Strategy</h3>
+		<p>
+			Instead of replacing the model entirely, I proposed a hybrid navigation approach combining 
+			strengths of both area-based and plant-based navigation.
+		</p>
+
+		<p>
+			Core concept:
+			Introduce a persistent plant list accessible across the product to enable fast switching while maintaining context.
+		</p>
+
+		<p>
+			I translated this strategy into three distinct navigation concepts.
+		</p>
+
+		<h3>Prototype Design</h3>
+		<p>
+			I designed and built interactive prototypes for three navigation variants. Each prototype supported realistic navigation tasks for testing.
+		</p>
+
+		<h3>Research & Validation</h3>
+		<p>
+			I planned and moderated usability tests using the interactive prototypes.
+		</p>
+
+		<p>
+			Research goals included:
+			<ul>
+				<li>Validate persistent plant selection behavior</li>
+				<li>Compare navigation model intuitiveness</li>
+				<li>Evaluate plant list usability and discoverability</li>
+				<li>Identify workflow enhancement needs</li>
+			</ul>
+		</p>
+		
+		<p>
+			Participants represented a wide range of portfolio sizes to ensure scalability. 
+			Prototype order was randomized to reduce bias. 
+			This study was conducted using our newly established user panel.
+		</p>
+
+		<h3>Synthesis & Decision</h3>
+		<p>I synthesized findings across sessions, identified clear preference patterns, 
+			and translated insights into product recommendations and MVP scope decisions.
+		</p>
+
+		<h3>Specification & Developer Handover</h3>
+		<p>
+			After selecting the preferred model, 
+			I refined the solution and produced structured documentation for development, including:
+			<ul>
+				<li>Interaction rules and edge cases</li>
+				<li>MVP feature definition</li>
+				<li>Recommendations for further iterations</li>
+				<li>User stories and detailed documentation</li>
+			</ul>
+		</p>
+
+		<p>I worked closely with developers to clarify behaviours, contraints, and ensure implementation readiness.</p>
+
+	<h2>Outcome</h2>
+		<p>Testing strongly validated the value of persistent plant selection across the product.
+			Among the three concepts, one was clearly preferred by the users. 
+		</p>
+
+
+	<p>
+			The final concept:
+			<ul>
+				<li>Reduced repeated plant reselection</li>
+				<li>Preserved navigation context across areas</li>
+				<li>Balanced visibility with layout stability</li>
+			</ul>
+		</p>
+		<p></p>
+		<p>
+			The feature moved forward with a validated direction, defined MVP scope, 
+			and complete developer-ready documentation.
+		</p>
+
+  	</div>
+</article>
+
+<article class="window" data-window="about">
+    <header class="window-titlebar">
+      <span class="window-title">About.exe</span>
+      <div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>
+    </header>
+
+    <div class="window-content">
+      <h1>About me</h1>
+
+      <p>
+    	I’m a farm-raised UX designer with an engineering past and a soft spot for complex systems - 
+		originally from Norway, now based in Berlin, Germany with my husband and very opinionated dog, Boo.
+      </p>
+
+      <p>
+      I started my career designing HVAC systems for large buildings - 
+	  which means I used to worry about airflow, pressure zones, insulation, sewage,
+	  and other things most people are happy never thinking about. 
+	  Eventually I realized I was more interested in how humans navigate complex systems than how air does, 
+	  and moved into UX - another thing people don't want to think about.
+	  And yes, my familty still don't really understand what I do for a living. 
+      </p>
+
+	  <p>
+		My UX work spans AR/XR products and SaaS platforms for monitoring and analyzing PV power plants. 
+		I enjoy tackling complex domains, building shared design foundations, 
+		and turning research and data into clear, usable interfaces.
+	 </p>
+
+	 <div class="image-row">
+		<img src="/images/portrait.png" alt="Portrait" />	
+		<img src="/images/boo.png" alt="Happy black dog with muddy nose" />
+		</div>
+
+    </div>
+
+  </article>
+
+<article class="window" data-window="resume">
+  <header class="window-titlebar">
+    <span class="window-title">Resume.pdf</span>
+	<div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>  </header>
+
+  <div class="window-content">
+<a href="/documents/annehegre_resume.pdf" download>
+  Download PDF </a>
+
+  <iframe
+      src="/documents/annehegre_resume.pdf"
+      width="100%"
+      height="100%"
+    ></iframe>
+
+</a>
+  </div>
+</article>
+
+<article class="window" data-window="contact">
+  <header class="window-titlebar">
+    <span class="window-title">Contact.app</span>
+	<div class="window-close-hitarea">
+  		<button class="window-close" aria-label="Close window">×</button>
+	</div>  </header>
+
+  <div class="window-content">
+    <h1>Contact</h1>
+
+    <p>
+  	<br>
+  	<a href="https://www.linkedin.com/in/oleasvensson" target="_blank" rel="noopener">
+    Connect with me on LinkedIn
+  	</a>
+  	<br>
+ 	 <a href="mailto:oleasvensson@protonmail.com">
+    Email me
+ 	 </a>
+	</p>
+
+	<img
+  src="public/images/contact.gif"
+  alt="BenDeLaCreme being sassy"
+  class="case-image--small"
+	/>
+
+  </div>
+</article>
+
+<article class="window" data-window="trash">
+  <div class="window-titlebar">
+    <div class="window-title">Trash</div>
+
+    <div class="window-close-hitarea">
+      <button class="window-close" aria-label="Close window">×</button>
+    </div>
+  </div>
+
+  <img
+  src="public/images/claudia.gif"
+  alt="Claudia Winkleman handing you an envelope - It's you. "
+  class="case-image--small"
+	/>
+
+	
+</article>
+
+</section>
+
+<div class="tagline">
+    <h1>A workspace for systems, stories, and interfaces</h1>
+    <p>UX designer with an engineering mindset</p>
+  </div>
+
+
+
+    </main>
+	 <script src="/src/scripts/window-manager.js"></script>
+  </body>
 </html>
