@@ -25,6 +25,7 @@ html, body {
   min-height: 100%;
 }
 
+
 /* Desktop */
 
 .desktop {
@@ -84,13 +85,14 @@ html, body {
 /* Icons */
 .icon {
   width: 100%;   
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
   cursor: pointer;
   user-select: none;
   padding: 8px;
+  pointer-events: auto;
 }
 
 .icon-image {
@@ -144,7 +146,7 @@ html, body {
 /* Window area */
 .window-stage {
   position: relative;
-  flex: 1;      
+  flex: 1;     
 }
 
 
@@ -159,6 +161,8 @@ html, body {
   font-size: 20px;
 
   z-index: 2;
+
+  pointer-events: none;
 }
 
 
@@ -193,7 +197,7 @@ html, body {
   pointer-events: none;
   transform: translateY(8px);
 
-  z-index: 10;
+  z-index: 100;
 }
 
 
@@ -250,6 +254,13 @@ html, body {
 
 
 /* Window content */
+
+.window-content img,
+.window-content video {
+  max-width: 100%;
+  height: auto;
+}
+
 .window-content {
   flex: 1; 
   min-height: 0;
@@ -302,12 +313,13 @@ html, body {
 }
 
 .avatar-image {
-  width: 300px; 
+  width: 320px;
+  max-width: 40vw;
   height: auto;
 }
 
 .avatar-bubble {
-  max-width: 220px;
+  width: min(240px, calc(100vw - 80px));
   padding: 12px 14px;
   margin-bottom: 160px;
   margin-left: 10px;
@@ -371,17 +383,25 @@ html, body {
 
 .case-image--medium {
   max-width: 640px;
+  height: auto;
+  text-align: center;
 
+  display: block;
+  margin: 16px 0;
+
+  border: 2px solid #000;
+  background: #fff;
 }
 
 .case-image--small {
   max-width: 420px;
+  height: auto;
   display: block;
   margin: 16px auto;
   text-align: center;
-  right: 16px; 
-  top: 16px; 
-  left: 16px;
+
+  border: 2px solid #000;
+  background: #fff;
 }
 
 .image-row {
@@ -390,12 +410,13 @@ html, body {
   margin: 16px 0;
 }
 
-.image-row > img {
+.image-row img {
   flex: 1 1 0;
   width: 0;
   height: auto;
   display: block;
   border: 2px solid #000;
+  max-width: 100%;
 }
 
 ul {
@@ -417,7 +438,7 @@ ul {
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 640px) {
 
   /* ---------- Desktop layout → vertical ---------- */
 
@@ -438,12 +459,14 @@ ul {
     flex-direction: row;
     justify-content: space-around;
 
-    padding: 8px 6px;
+    padding: 4px 4px;
 
     background: var(--w95-bg);
     border-top: 2px solid var(--w95-dark);
 
     z-index: 40;
+
+    gap: 0;
   }
 
   .icon {
@@ -496,5 +519,21 @@ ul {
   .image-row {
     flex-direction: column;
   }
+
+  .image-row img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+  .icon-image {
+     width: 32px;
+    height: 32px;
+  }
+
+    .avatar {
+    display: none; 
+  }
+
 
 }
